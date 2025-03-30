@@ -6,3 +6,4 @@ yfinance
 schedule
 aiohttp
 matplotlib
+chromedriver-py  # 추가
