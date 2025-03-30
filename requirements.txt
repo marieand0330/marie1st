@@ -1,0 +1,8 @@
+Flask
+gunicorn
+selenium
+beautifulsoup4
+yfinance
+schedule
+aiohttp
+matplotlib
