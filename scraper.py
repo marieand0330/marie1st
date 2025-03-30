@@ -23,12 +23,12 @@ from config import BROWSER_USER_AGENT
 logger = logging.getLogger(__name__)
 
 class ETFScraper:
-    """
-    Scrapes ETF information from Zum Invest website
-    """
     def __init__(self):
-        self.driver = None
-        self.setup_driver()
+        options = Options()
+        options.add_argument("--headless")  # 헤드리스 모드
+        options.add_argument("--no-sandbox")  # 샌드박스 비활성화
+        options.add_argument("--disable-dev-shm-usage")  # 메모리 문제 방지
+        self.driver = webdriver.Chrome(executable_path=binary_path, options=options)
         
     def setup_driver(self):
         """
